@@ -1,0 +1,92 @@
+/* Main container and layout similar to Login */
+.login-emp-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.image-side {
+    width: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-side img {
+    max-width: 70%;
+    border-radius: 10px;
+}
+
+.emp-form-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+h2 {
+    color: #5f5cf8;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Input and form styling */
+.emp-form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.emp-form-group input,
+.emp-form-group select {
+    width: 50%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.emp-login-btn {
+    width: 50%;
+    padding: 15px;
+    background-color: #5f5cf8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.emp-login-btn:hover {
+    background-color: #4b4add;
+}
+
+/* Error message styling */
+.emp-error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Register link */
+.emp-register-link {
+    margin-top: 15px;
+    color: #5f5cf8;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-emp-container {
+        flex-direction: column;
+    }
+
+    .image-side,
+    .emp-form-side {
+        width: 100%;
+    }
+}

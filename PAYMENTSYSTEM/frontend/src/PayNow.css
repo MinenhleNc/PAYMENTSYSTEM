@@ -1,0 +1,78 @@
+/* Main container styling */
+.paynow-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5f5cf8;
+    font-size: 1.8rem;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.paynow-container input[type="number"],
+.paynow-container input[type="text"],
+.paynow-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+
+/* Button styling */
+.paynow-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #5f5cf8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.paynow-btn:hover {
+    background-color: #4b4add;
+}
+
+/* Error and success message styling */
+.error-message,
+.success-message {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}

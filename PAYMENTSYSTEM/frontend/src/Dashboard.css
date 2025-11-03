@@ -1,0 +1,136 @@
+.dashboard {
+    padding: 20px;
+    background-color: #f0f4f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logout-menu {
+    cursor: pointer;
+    background-color: #5f5cf8; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 14px; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
+}
+
+.logout-menu:hover {
+    background-color: #4200b3; 
+}
+
+.action-cards {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 1050px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recent-transactions {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+td {
+    color: #666;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.welcome-text {
+    color: #620597; /* Blue color */
+    font-size: 24px; /* Optional: Change the font size */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+
+
+
+/* // Code Attribution
+// This code was referenced from W3Schools
+// CSS Tutorial (w3schools.com)
+// Author name , W3Schools 
+// CSS Tutorial (w3schools.com) */

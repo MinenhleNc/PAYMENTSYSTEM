@@ -1,0 +1,115 @@
+.employee-dashboard {
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #6a1b9a;
+  }
+  
+  .message {
+    padding: 10px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .payments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .payments-table th, .payments-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .payments-table th {
+    background-color: #f3f3f3;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .payments-table td {
+    font-size: 1em;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #4a148c;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .popup-content h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+  }
+  
+  .confirm-btn, .submit-btn, .close-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  .confirm-btn {
+    background-color: #3ab93f;
+    color: #fff;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #62d866;
+  }
+  
+  .submit-btn {
+    background-color: #3e025c;
+    color: #fff;
+  }
+  
+  .submit-btn:hover {
+    background-color: #770593;
+  }
+  
+  .close-btn {
+    background-color: #b80606;
+    color: #f7f4f4;
+  }
+  
+  .close-btn:hover {
+    background-color: #eb3939;
+  }
