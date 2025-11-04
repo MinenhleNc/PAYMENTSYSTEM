@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build directories
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files (VS Code)
+.vscode/
+*.code-workspace
+
+# SSL keys (if you’re using local testing keys)
+keys/
+
+# Optional: ignore coverage reports
+coverage/

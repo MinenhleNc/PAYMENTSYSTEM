@@ -1,0 +1,6 @@
+projectKey=PAYMENTSYSTEM
+serverUrl=http://localhost:9000
+serverVersion=25.10.0.114319
+dashboardUrl=http://localhost:9000/dashboard?id=PAYMENTSYSTEM
+ceTaskId=66322581-b04b-49be-9d00-f434bcb48634
+ceTaskUrl=http://localhost:9000/api/ce/task?id=66322581-b04b-49be-9d00-f434bcb48634
