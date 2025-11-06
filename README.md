@@ -29,7 +29,7 @@ This system implements:
 - **npm (Node Package Manager)**
 - **React.js** (Frontend)
 - **Express.js** (Backend)
-- **MySQL** (Database)
+- **MongoDB** (Database)
 - **bcrypt** (Password hashing)
 - **SonarQube** (Code scanning)
 - **Visual Studio Code (VS Code)**
@@ -41,7 +41,6 @@ This system implements:
 ### 🧱 Prerequisites
 Before running the project, ensure that you have:
 - **Node.js** and **npm** installed  
-- **MySQL Server** running locally  
 - **An IDE** such as Visual Studio Code (VS Code)  
 
 ---
@@ -49,241 +48,231 @@ Before running the project, ensure that you have:
 ### 🔽 Step 1: Clone the Repository
 Open your terminal and run:
 ```bash
-[git clone https://github.com/YOUR_GITHUB_USERNAME/international-banking-payment-system.git](https://github.com/MinenhleNc/PAYMENTSYSTEM.git)
+git clone https://github.com/MinenhleNc/PAYMENTSYSTEM.git
+```
 
-🚀 Running the Application
-🖥️ Backend Setup
+Then navigate to the project folder:
 
-Open a new terminal window in your IDE.
+```bash
+cd PAYMENTSYSTEM
+```
 
-Navigate to the backend folder:
+---
 
-cd backend
+## 🚀 Running the Application
 
+### 🖥️ Backend Setup
 
-Install all backend dependencies:
+1. Open a new terminal window in your IDE.
+2. Navigate to the backend folder:
 
-npm install
+   ```bash
+   cd backend
+   ```
+3. Install all backend dependencies:
 
+   ```bash
+   npm install
+   ```
+4. Start the backend server:
 
-Start the backend server:
+   ```bash
+   npm run dev
+   ```
 
-npm run dev
+   The backend will start on **[http://localhost:5000](http://localhost:5000)**
 
+---
 
-The backend will start on http://localhost:5000
+### 💻 Frontend Setup
 
-💻 Frontend Setup
+1. Open another terminal window in your IDE.
+2. Navigate to the frontend folder:
 
-Open another terminal window in your IDE.
+   ```bash
+   cd frontend
+   ```
+3. Install all frontend dependencies:
 
-Navigate to the frontend folder:
+   ```bash
+   npm install
+   ```
+4. Start the frontend application:
 
-cd frontend
+   ```bash
+   npm start
+   ```
 
+   The frontend will start on **[http://localhost:3000](http://localhost:3000)**
 
-Install all frontend dependencies:
+---
 
-npm install
+## 🧠 How to Use
 
+### 📝 Registering a New Account
 
-Start the frontend application:
+1. Launch the frontend application (**[http://localhost:3000](http://localhost:3000)**).
+2. You will be directed to the **Register** page.
+3. Fill in the required fields:
 
-npm start
+   * Full Name
+   * ID Number (12 digits)
+   * Account Number (10 digits)
+   * Email
+   * Password
+   * Confirm Password
+4. Click **Register** to submit your information.
+   The password will be securely hashed before being stored in the database.
 
+---
 
-The frontend will start on http://localhost:3000
+### 🔐 Logging In
 
-🗄️ Database Configuration
+1. After successful registration, you’ll be redirected to the **Login** page.
+2. Enter your **Email** and **Password** used during registration.
+3. Click **Login** to access your dashboard.
 
-Open MySQL and create a database:
+---
 
-CREATE DATABASE paymentsystem;
+### 💳 Making a Payment
 
+1. After login, you’ll land on the **Customer Dashboard**.
+2. Fill out the **Make a Payment** form:
 
-Configure the connection details in backend/config/db.js:
+   * Amount to pay
+   * Currency (choose from dropdown)
+   * Recipient’s Account Number
+   * SWIFT Code
+3. Click **Pay Now** to complete the transaction.
 
-host: 'localhost',
-user: 'root',
-password: 'YOUR_PASSWORD',
-database: 'paymentsystem'
+Your payment will appear in the transaction history below with a **Pending** status until verified by an employee.
 
-🧠 How to Use
-📝 Registering a New Account
+---
 
-Launch the frontend application (http://localhost:3000).
+### 📜 Viewing Transactions
 
-You will be directed to the Register page.
+At the bottom of the dashboard, your transaction history displays:
 
-Fill in the required fields:
+* **Account Number**
+* **Amount Paid**
+* **Date of Payment**
+* **Payment Status** (Pending / Verified)
 
-Full Name
+---
 
-ID Number (12 digits)
+### 🚪 Logging Out
 
-Account Number (10 digits)
+To securely end your session, click the **Logout** button at the top-right corner of the dashboard.
 
-Email
+---
 
-Password
+## 👨‍💼 Updated Features
 
-Confirm Password
+### 🔑 Employee Login
 
-Click Register to submit your information.
-The password will be securely hashed before being stored in the database.
+* Employees log in using their **Email**, **Password**, and **Role**.
+* After authentication, they can access the **Employee Dashboard**.
 
-🔐 Logging In
+---
 
-After successful registration, you’ll be redirected to the Login page.
-
-Enter your Email and Password used during registration.
-
-Click Login to access your dashboard.
-
-💳 Making a Payment
-
-After login, you’ll land on the Customer Dashboard.
-
-Fill out the Make a Payment form:
-
-Amount to pay
-
-Currency (choose from dropdown)
-
-Recipient’s Account Number
-
-SWIFT Code
-
-Click Pay Now to complete the transaction.
-
-Your payment will appear in the transaction history below with a Pending status until verified by an employee.
-
-📜 Viewing Transactions
-
-Your transaction history (at the bottom of the dashboard) displays:
-
-Account Number
-
-Amount Paid
-
-Date of Payment
-
-Payment Status (Pending / Verified)
-
-🚪 Logging Out
-
-To securely end your session, click the Logout button at the top-right corner of the dashboard.
-
-👨‍💼 Updated Features
-🔑 Employee Login
-
-Employees log in using their Email, Password, and Role.
-
-After authentication, they can access the Employee Dashboard.
-
-🧭 Admin Dashboard
+### 🧭 Admin Dashboard
 
 The admin dashboard displays the system logo (top left) and user info with a Logout button (top right).
 
-Admins can:
+**Admin Features:**
 
-View all registered employees (email and role)
+* View all registered employees (email and role)
+* Create new employee accounts
 
-Create new employee accounts
+**To create a new employee:**
 
-To create a new employee:
+1. Enter **Email**, **Password**, and **Role**
+2. Click **Add Employee**
+3. The new employee will appear in the list.
 
-Enter Email, Password, and Role
+---
 
-Click Add Employee
-
-The new employee will appear in the list.
-
-🧾 Employee Dashboard
+### 🧾 Employee Dashboard
 
 The Employee Dashboard includes:
 
-System logo (top left)
-
-“Employee” label and Logout button (top right)
+* System logo (top left)
+* “Employee” label and Logout button (top right)
 
 Displays a list of customer payments:
 
-Account Number
+* **Account Number**
+* **Amount**
+* **Date**
+* **Status**
+* **Action (Verify)**
 
-Amount
+Employees can review pending payments and mark them as **Verified**.
 
-Date
+---
 
-Status
+## 🔒 Security Features
 
-Action (Verify)
+* **Password hashing** using bcrypt
+* **RegEx input validation** for all fields
+* **SSL/HTTPS** enforced
+* **Protection against common attacks:**
 
-Employees can review pending payments and mark them as Verified.
+  * SQL Injection (parameterized queries)
+  * XSS (input sanitization)
+  * CSRF (token-based protection)
+  * Brute-force (rate limiting)
 
-🔒 Security Features
+---
 
-Password hashing using bcrypt
+## 🧰 SonarQube DevSecOps Integration
 
-RegEx input validation for all fields
+SonarQube was used for static code analysis both **locally** and **via cloud** to ensure:
 
-SSL/HTTPS enforced
+* No security vulnerabilities
+* No code smells
+* Clean, maintainable code
 
-Protection against common attacks:
+**Scan Steps:**
 
-SQL Injection (parameterized queries)
+1. Install SonarQube Scanner
+2. Configure the project in `sonar-project.properties`
+3. Run:
 
-XSS (input sanitization)
+   ```bash
+   sonar-scanner
+   ```
+4. View detailed security and quality reports in your SonarQube dashboard.
 
-CSRF (token-based protection)
+---
 
-Brute-force (rate limiting)
-
-🧰 SonarQube DevSecOps Integration
-
-SonarQube was used for static code analysis both locally and via cloud to ensure:
-
-No security vulnerabilities
-
-No code smells
-
-Clean, maintainable code
-
-Scan Steps:
-
-Install SonarQube Scanner
-
-Configure the project in sonar-project.properties
-
-Run:
-
-sonar-scanner
-
-
-View detailed security and quality reports in your SonarQube dashboard.
-
-📺 Video Demonstration
+## 📺 Video Demonstration
 
 A full video demonstration showing:
 
-Frontend and backend setup
+* Frontend and backend setup
+* Registration, login, and payment flow
+* Employee and admin functionality
+* SonarQube scanning
 
-Registration, login, and payment flow
+🎥 **YouTube Link:** [INSERT YOUR VIDEO LINK HERE]
 
-Employee and admin functionality
+---
 
-SonarQube scanning
+## 🧾 Admin Login Credentials
 
-🎥 YouTube Link: [INSERT YOUR VIDEO LINK HERE]
+| Role      | Email                                         | Password       |
+| --------- | --------------------------------------------- | -------------- |
+| **Admin** | [admin@company.com](mailto:admin@company.com) | **Minimie12@** |
 
-🧾 Admin Login Credentials
-Role	Email	Password
-Admin	admin@company.com
-	Minimie12@
-🧠 Summary
+---
+
+## 🧠 Summary
 
 This project successfully implements secure login, payment processing, and verification features following best security practices. It integrates DevSecOps tools (SonarQube) and demonstrates full role-based system functionality across customer, employee, and admin levels.
 
-📜 License
+---
+
+### 📜 License
 
 This project is for educational purposes only (APDS - Task 3, 2025).
